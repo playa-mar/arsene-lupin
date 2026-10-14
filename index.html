@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arsène Lupin — Il Ladro Gentiluomo | Édition Belle Époque</title>
+    <!-- Favicon: cilindro e monocolo in oro su fondo bordeaux -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='13' fill='%236b1f2a' stroke='%23c9a24b' stroke-width='3'/%3E%3Cpath d='M21 38V15q0-3 3-3h16q3 0 3 3v23z' fill='%23c9a24b'/%3E%3Crect x='21' y='28' width='22' height='5' fill='%23120e0c'/%3E%3Crect x='11' y='37' width='42' height='6' rx='3' fill='%23e5c378'/%3E%3Ccircle cx='43' cy='50' r='5' fill='none' stroke='%23e5c378' stroke-width='2.2'/%3E%3C/svg%3E">
+    <meta name="theme-color" content="#120e0c">
     <!-- Google Fonts: Playfair Display, Cormorant Garamond, Cinzel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,13 +118,13 @@
         // --- DATA CATALOGS ---
 
         const BOOKS = [
-            { year: 1907, original: "Arsène Lupin, gentleman-cambrioleur", italian: "Arsenio Lupin, ladro gentiluomo", type: "Raccolta di 9 racconti", note: "La celebre opera d'esordio che raccoglie i primi racconti usciti su 'Je Sais Tout'.", stories: [["L'arresto di Arsène Lupin","L'arrestation d'Arsène Lupin"],["Arsène Lupin in prigione","Arsène Lupin en prison"],["L'evasione di Arsène Lupin","L'évasion d'Arsène Lupin"],["Il misterioso viaggiatore","Le mystérieux voyageur"],["La collana della regina","Le collier de la reine"],["Il Sette di Cuori","Le Sept de Cœur"],["La cassaforte di madame Imbert","Le coffre-fort de madame Imbert"],["La perla nera","La perle noire"],["Herlock Sholmes arriva troppo tardi","Herlock Sholmès arrive trop tard"]] },
+            { year: 1907, original: "Arsène Lupin, gentleman-cambrioleur", italian: "Arsenio Lupin, ladro gentiluomo", type: "Raccolta di 9 racconti", note: "La celebre opera d'esordio che raccoglie i primi racconti usciti su 'Je Sais Tout'.", stories: [["L'arresto di Arsenio Lupin","L'arrestation d'Arsène Lupin"],["Arsenio Lupin in prigione","Arsène Lupin en prison"],["L'evasione di Arsenio Lupin","L'évasion d'Arsène Lupin"],["Il misterioso viaggiatore","Le mystérieux voyageur"],["La collana della regina","Le collier de la reine"],["Il Sette di Cuori","Le Sept de Cœur"],["La cassaforte di madame Imbert","Le coffre-fort de madame Imbert"],["La perla nera","La perle noire"],["Herlock Sholmes arriva troppo tardi","Herlock Sholmès arrive trop tard"]] },
             { year: 1908, original: "Arsène Lupin contre Herlock Sholmès", italian: "Arsenio Lupin contro Herlock Sholmes", type: "Raccolta / Romanzo", note: "Il leggendario scontro con la celebre parodia del detective britannico di Conan Doyle.", cta: "Vedi i due episodi", contentsTitle: "Un romanzo e un racconto", stories: [["La donna bionda","La dame blonde","Romanzo"],["La lampada ebraica","La lampe juive","Racconto"]] },
             { year: 1909, original: "L'Aiguille creuse", italian: "Il faraglione cavo", type: "Romanzo", note: "Noto anche come 'La guglia cava' o 'Il segreto della guglia'. Capolavoro indiscusso." },
-            { year: 1910, original: "813", italian: "813", type: "Romanzo", note: "Riedito nel 1917 in due tomi: 'La doppia vita di Arsène Lupin' e 'I tre delitti di Arsène Lupin'.", cta: "Vedi i due volumi del 1917", contentsTitle: "Rieditato nel 1917 in due volumi", stories: [["La doppia vita di Arsène Lupin","La double vie d'Arsène Lupin","Volume I"],["I tre delitti di Arsène Lupin","Les trois crimes d'Arsène Lupin","Volume II"]] },
+            { year: 1910, original: "813", italian: "813", type: "Romanzo", note: "Riedito nel 1917 in due tomi: 'La doppia vita di Arsenio Lupin' e 'I tre delitti di Arsenio Lupin'.", cta: "Vedi i due volumi del 1917", contentsTitle: "Rieditato nel 1917 in due volumi", stories: [["La doppia vita di Arsenio Lupin","La double vie d'Arsène Lupin","Volume I"],["I tre delitti di Arsenio Lupin","Les trois crimes d'Arsène Lupin","Volume II"]] },
             { year: 1912, original: "Le bouchon de cristal", italian: "Il tappo di cristallo", type: "Romanzo", note: "Ispirato al noto scandalo di Panama; uno dei romanzi più drammatici della saga." },
             { year: 1912, original: "L'homme à la peau de bique", italian: "L'uomo con la pelle di capra", type: "Racconto", note: "Pubblicato inizialmente su rivista negli Stati Uniti prima dell'edizione francese." },
-            { year: 1913, original: "Les confidences d'Arsène Lupin", italian: "Le confidenze di Arsenio Lupin", type: "Raccolta di 9 racconti", note: "Nove brillanti avventure retrospettive narrate dal ladro gentiluomo.", stories: [["Giochi di sole","Les jeux du soleil"],["L'anello nuziale","L'anneau nuptial"],["Il segno dell'ombra","Le signe de l'ombre"],["La trappola infernale","Le piège infernal"],["La sciarpa di seta rossa","L'écharpe de soie rouge"],["La morte in agguato","La mort qui rôde"],["Edith dal Collo di Cigno","Edith au Cou de Cygne"],["La festuca di paglia","Le fétu de paille"],["Il matrimonio di Arsène Lupin","Le mariage d'Arsène Lupin"]] },
+            { year: 1913, original: "Les confidences d'Arsène Lupin", italian: "Le confidenze di Arsenio Lupin", type: "Raccolta di 9 racconti", note: "Nove brillanti avventure retrospettive narrate dal ladro gentiluomo.", stories: [["Giochi di sole","Les jeux du soleil"],["L'anello nuziale","L'anneau nuptial"],["Il segno dell'ombra","Le signe de l'ombre"],["La trappola infernale","Le piège infernal"],["La sciarpa di seta rossa","L'écharpe de soie rouge"],["La morte in agguato","La mort qui rôde"],["Edith dal Collo di Cigno","Edith au Cou de Cygne"],["La festuca di paglia","Le fétu de paille"],["Il matrimonio di Arsenio Lupin","Le mariage d'Arsène Lupin"]] },
             { year: 1916, original: "L'Éclat d'obus", italian: "La scheggia d'obice", type: "Romanzo", note: "Ambientato durante la Prima guerra mondiale; apparizione cameo di Lupin." },
             { year: 1918, original: "Le Triangle d'or", italian: "Il triangolo d'oro", type: "Romanzo", note: "Un intrigo patriottico ed economico all'ombra della Grande Guerra." },
             { year: 1919, original: "L'Ile aux Trente Cercueils", italian: "L'Isola delle Trenta Bare", type: "Romanzo", note: "Toni gotici, leggende celtiche e misteri sulla remota isola bretone di Sarek." },
@@ -143,11 +146,11 @@
         ];
 
         const THEATER = [
-            { year: 1908, original: "Arsène Lupin", italian: "Arsène Lupin", notes: "Scritta in collaborazione con Francis De Croisset. Trionfo assoluto al Théâtre de l'Athénée di Parigi." },
-            { year: 1911, original: "Une aventure d'Arsène Lupin", italian: "Un'avventura di Arsène Lupin", notes: "Dramma teatrale in un atto scritto da Maurice Leblanc." },
-            { year: 1920, original: "Le retour d'Arsène Lupin", italian: "Il ritorno di Arsène Lupin", notes: "Scritta nuovamente a quattro mani con Francis De Croisset." },
-            { year: 1930, original: "Cette femme est à moi", italian: "Questa donna è mia", notes: "Commedia scritta negli anni Trenta ma mai rappresentata in scena; pubblicata solo postuma nel 2015 dall'Association des Amis d'Arsène Lupin." },
-            { year: 1932, original: "Un quart d'heure avec Arsène Lupin", italian: "Un quarto d'ora con Arsène Lupin", notes: "Breve atto unico radiofonico/teatrale di Maurice Leblanc." }
+            { year: 1908, original: "Arsène Lupin", italian: "Arsenio Lupin", notes: "Scritta in collaborazione con Francis De Croisset. Trionfo assoluto al Théâtre de l'Athénée di Parigi." },
+            { year: 1911, original: "Une aventure d'Arsène Lupin", italian: "Un'avventura di Arsenio Lupin", notes: "Dramma teatrale in un atto scritto da Maurice Leblanc." },
+            { year: 1920, original: "Le retour d'Arsène Lupin", italian: "Il ritorno di Arsenio Lupin", notes: "Scritta nuovamente a quattro mani con Francis De Croisset." },
+            { year: 1930, original: "Cette femme est à moi", italian: "Questa donna è mia", notes: "Commedia scritta negli anni Trenta ma mai rappresentata in scena; pubblicata solo postuma nel 2015 dall'Association des Amis d’Arsène Lupin." },
+            { year: 1932, original: "Un quart d'heure avec Arsène Lupin", italian: "Un quarto d'ora con Arsenio Lupin", notes: "Breve atto unico radiofonico/teatrale di Maurice Leblanc." }
         ];
 
         const CINEMA = [
@@ -170,7 +173,7 @@
         const GALLERY_ITEMS = [
             { image: "images/arresto_lupin.jpg", title: "L'arrestation d'Arsène Lupin", year: "Luglio 1905", tag: "Prima Apparizione", subtitle: "Je Sais Tout — N° 6", desc: "La primissima pubblicazione sulla rivista parigina fondata da Pierre Lafitte." },
             { image: "images/Gentleman-Cambrioleur.jpg", title: "Gentleman-Cambrioleur", year: "Parigi, 1907", tag: "Volume I", subtitle: "Copertina originale", desc: "La copertina della prima raccolta, nello stile delle celebri illustrazioni di Léo Fontan." },
-            { image: "images/piece_teatrale.jpg", title: "La pièce teatrale", year: "Parigi, 1908", tag: "Teatro de l'Athénée", subtitle: "Manifesto d'epoca", desc: "Locandina Belle Époque dello spettacolo di Maurice Leblanc e Francis de Croisset." },
+            { image: "images/piece_teatrale.jpg", title: "La pièce teatrale", year: "Parigi, 1908", tag: "Théâtre de l'Athénée", subtitle: "Manifesto d'epoca", desc: "Locandina Belle Époque dello spettacolo di Maurice Leblanc e Francis de Croisset." },
             { image: "images/aiguille_creuse.jpg", title: "L'Aiguille Creuse", year: "Éditions Lafitte, 1909", tag: "Romanzo Culto", subtitle: "La Guglia di Étretat", desc: "Il leggendario mistero ambientato tra le scogliere della Normandia." },
             { image: "images/lupin_film_1932.jpg", title: "Locandina Cinema MGM", year: "Hollywood, 1932", tag: "Cinema Classico", subtitle: "Barrymore & Conway", desc: "Il manifesto del film MGM, dell'epoca d'oro del cinema americano." },
             { image: "images/lupin_serie_1971.jpg", title: "Serie Televisiva RAI/ORTF", year: "1971 — 1974", tag: "Icona TV", subtitle: "Georges Descrières", desc: "L'eleganza con cilindro, monocolo e mantella che ha incantato generazioni." }
@@ -345,7 +348,7 @@
 
                         {/* Mobile Dropdown Menu */}
                         {mobileMenuOpen && (
-                            <div className="md:hidden bg-[#16120f] border-b border-[#c9a24b]/40 px-4 pt-2 pb-6 space-y-2 animate-fadeIn">
+                            <div className="md:hidden bg-[#16120f] border-b border-[#c9a24b]/40 px-4 pt-2 pb-6 space-y-2">
                                 {navLinks.map(link => (
                                     <button
                                         key={link.id}
@@ -954,7 +957,7 @@
                             <div className="h-px bg-gradient-to-r from-transparent via-[#c9a24b]/40 to-transparent w-full max-w-md mx-auto"></div>
 
                             <div className="font-garamond text-sm text-[#c9a24b]/80 space-y-1">
-                                <p>Dati storici e bibliografici raccolti da archivi e fonti pubbliche (Wikipedia, Société des Amis d'Arsène Lupin).</p>
+                                <p>Dati storici e bibliografici raccolti da archivi e fonti pubbliche (Wikipedia, Association des Amis d’Arsène Lupin).</p>
                                 <p className="font-cinzel text-xs tracking-wider text-[#d8ceb8]/60 mt-3">
                                     © {new Date().getFullYear()} — Arsène Lupin - Il Ladro Gentiluomo | Édition Belle Époque
                                 </p>
