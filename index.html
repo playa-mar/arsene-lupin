@@ -112,7 +112,10 @@
             Filter,
             Crown,
             ScrollText,
-            Clock
+            Clock,
+            Radio,
+            Disc3,
+            Palette
         } from 'lucide-react';
 
         // --- DATA CATALOGS ---
@@ -154,11 +157,25 @@
         ];
 
         const CINEMA = [
+            { year: 1908, original: "The Gentleman Burglar", italian: "The Gentleman Burglar", director: "Edwin S. Porter", imdb: "https://www.imdb.com/title/tt0366510/", notes: "Produzione statunitense, con William Ranous nel ruolo di Lupin." },
+            { year: 1910, original: "Arsène Lupin contra Sherlock Holmes", italian: "Arsène Lupin contra Sherlock Holmes", director: "Viggo Larsen", imdb: "https://www.imdb.com/title/tt1163741/", notes: "Produzione tedesca in cinque episodi, con Paul Otto nel ruolo di Lupin." },
+            { year: 1914, original: "Arsène Lupin", italian: "Arsenio Lupin", director: "Émile Chautard", imdb: "https://www.imdb.com/title/tt0461463/", notes: "Produzione francese, con Georges Tréville nel ruolo di Lupin." },
+            { year: 1915, original: "The Gentleman Burglar", italian: "The Gentleman Burglar", director: "E. A. Martin", imdb: "https://www.imdb.com/title/tt1179851/", notes: "Produzione statunitense, con William Stowell nel ruolo di Lupin." },
             { year: 1919, img: "images/the_teeth_of_the_tiger_1919.jpg", original: "The Teeth of the Tiger", italian: "The Teeth of the Tiger", director: "Chester Withey", imdb: "https://www.imdb.com/title/tt0010761/", notes: "Pellicola muta statunitense tratta dall'omonimo romanzo." },
+            { year: 1920, img: "images/813_1920.jpg", original: "813-Arsene Lupin", italian: "813-Arsene Lupin", director: "Scott F. Sidney", imdb: "https://www.imdb.com/title/tt0010942/", notes: "Produzione statunitense, con Wedgwood Nowell nel ruolo di Lupin." },
+            { year: 1921, original: "Arsen Lupin utolso kalandja", italian: "Arsen Lupin utolso kalandja", director: "Paul Fejos", imdb: "https://www.imdb.com/title/tt0011931/", notes: "Produzione ungherese, con Gusztav Partos nel ruolo di Lupin." },
+            { year: 1923, original: "813-Rupimono", italian: "813-Rupimono", director: "Kenji Mizoguchi", imdb: "https://www.imdb.com/title/tt0013812/", notes: "Produzione giapponese, con Minami Kômei nel ruolo di Lupin." },
+            { year: 1928, img: "images/vom_taeter_fehlt_jede_spur_1928.jpg", original: "Vom Täter fehlt jede Spur", italian: "Vom Täter fehlt jede Spur", director: "Constantin J. David", imdb: "https://www.imdb.com/title/tt0438569/", notes: "Produzione tedesca, con Kurt Gerron nel ruolo di Lupin (nel film chiamato Arsène Dupin)." },
             { year: 1932, img: "images/arsenio_lupin_1932.jpg", original: "Arsène Lupin", italian: "Arsenio Lupin", director: "Jack Conway", imdb: "https://www.imdb.com/title/tt0022639/", notes: "Produzione MGM con John Barrymore e Lionel Barrymore." },
+            { year: 1937, img: "images/arsene_lupin_detective_1937.jpg", original: "Arsène Lupin détective", italian: "Arsène Lupin détective", director: "Henri Diamant-Berger", imdb: "https://www.imdb.com/title/tt0143116/", notes: "Produzione francese, con Jules Berry nel ruolo di Lupin." },
+            { year: 1938, img: "images/arsene_lupin_returns_1938.jpg", original: "Arsène Lupin Returns", italian: "Arsène Lupin Returns", director: "George Fitzmaurice", imdb: "https://www.imdb.com/title/tt0029884/", notes: "Produzione statunitense, con Melvyn Douglas nel ruolo di Lupin." },
+            { year: 1944, img: "images/enter_arsene_lupin_1944.jpg", original: "Enter Arsene Lupin", italian: "Enter Arsene Lupin", director: "Ford L. Beebe", imdb: "https://www.imdb.com/title/tt0036794/", notes: "Produzione statunitense, con Melvyn Douglas nel ruolo di Lupin." },
+            { year: 1947, img: "images/arsenio_lupin_1947.jpg", original: "Arsenio Lupin", italian: "Arsenio Lupin", director: "Ramon Peon", imdb: "https://www.imdb.com/title/tt0139860/", notes: "Produzione messicana, con Ramon Pereda nel ruolo di Lupin." },
+            { year: 1947, img: "images/el_inspector_victor_contra_arsenio_lupin_1947.jpg", original: "El Inspector Victor contra Arsenio Lupin", italian: "El Inspector Victor contra Arsenio Lupin", director: "Ramon Peon", imdb: "https://www.imdb.com/title/tt0140286/", notes: "Produzione messicana, con Ramon Pereda nel ruolo di Lupin." },
             { year: 1957, img: "images/le_avventure_arsenio_lupin_1957.jpg", original: "Les Aventures d'Arsène Lupin", italian: "Le avventure di Arsenio Lupin", director: "Jacques Becker", imdb: "https://www.imdb.com/title/tt0050152/", notes: "Con Robert Lamoureux nel ruolo di Lupin." },
             { year: 1959, img: "images/il_ritorno_arsenio_lupin_1959.jpg", original: "Signé: Arsène Lupin", italian: "Il ritorno di Arsenio Lupin", director: "Yves Robert", imdb: "https://www.imdb.com/title/tt0052578/", notes: "Robert Lamoureux riprende il ruolo del celebre ladro." },
             { year: 1962, img: "images/arsenio_lupin_contro_arsenio_lupin_1962.jpg", original: "Arsène Lupin contre Arsène Lupin", italian: "Arsenio Lupin contro Arsenio Lupin", director: "Édouard Molinaro", imdb: "https://www.imdb.com/title/tt0055759/", notes: "Commedia con Jean-Claude Brialy e Jean-Pierre Cassel." },
+            { year: 1979, img: "images/lupin_III_il_castello_di_cagliostro_1979.jpg", original: "Rupan sansei: Kariosutoro no shiro", italian: "Lupin III – Il castello di Cagliostro", director: "Hayao Miyazaki", imdb: "https://www.imdb.com/title/tt0079833/", notes: "Film d'animazione dedicato a Lupin III, con la voce di Yasuo Yamada nel ruolo del protagonista." },
             { year: 2004, img: "images/arsenio_lupin_2004.jpg", original: "Arsène Lupin", italian: "Arsenio Lupin", director: "Jean-Paul Salomé", imdb: "https://www.imdb.com/title/tt0373690/", notes: "Produzione franco-italo-spagnola con Romain Duris, Kristin Scott Thomas ed Eva Green." },
         ];
 
@@ -168,6 +185,28 @@
             { year: "1989–1996", img: "images/il_ritorno_arsenio_lupin_1989.jpg", original: "Le Retour d'Arsène Lupin", italian: "Il ritorno di Arsenio Lupin", imdb: "https://www.imdb.com/title/tt0096689/", notes: "Serie televisiva con François Dunoyer nel ruolo del protagonista." },
             { year: "1996", img: "images/les_exploits_de_arsene_lupin_1996.jpg", original: "Les exploits d'Arsène Lupin", italian: "Les exploits d'Arsène Lupin", imdb: "https://www.imdb.com/it/title/tt0115293/", notes: "Serie animata franco-canadese prodotta da Cinar e France-Animation (26 episodi)." },
             { year: "2021–oggi", img: "images/lupin_2021.jpg", original: "Lupin", italian: "Lupin", imdb: "https://www.imdb.com/it/title/tt2531336/", notes: "Serie Netflix con Omar Sy nel ruolo di Assane Diop." }
+        ];
+
+        const RADIO = [
+            { years: "marzo 1960 – luglio 1961", title: "Arsène Lupin", broadcaster: "France Inter", creator: "Abder Isker", adaptation: "Jean Marcillac", voice: "Michel Roux" }
+        ];
+
+        const DISCOGRAPHY = [
+            { title: "La Demeure mystérieuse", text: "Testo ridotto", discs: "3 cd", label: "Livraphone", code: "LIV 7014", year: 2001 },
+            { title: "L’Aiguille creuse", text: "Testo integrale", discs: "6 cd", label: "Livraphone", code: "LIV167C", year: 2004 },
+            { title: "La demoiselle aux yeux verts", text: "Testo integrale", discs: "6 cd", label: "Livraphone", ean: "3358950000197", year: 2004 },
+            { title: "La Barre y va", text: "Testo integrale", discs: "5 cd", label: "Livraphone", ean: "3358950000319", year: 2004 }
+        ];
+
+        const COMICS_INFO = { adapter: "André-Paul Duchâteau", publisher: "Claude Lefrancq Éditeur, Bruxelles" };
+
+        const COMICS = [
+            { n: 1, title: "Le bouchon de cristal", artist: "Jacques Géron", year: 1989 },
+            { n: 2, title: "813: la double vie", artist: "Jacques Géron", year: 1990 },
+            { n: 3, title: "813: les trois crimes", artist: "Jacques Géron", year: 1991 },
+            { n: 4, title: "La demoiselle aux yeux verts", artist: "Jacques Géron", year: 1992 },
+            { n: 5, title: "Victor de la Brigade Mondaine", artist: "Erwin Drèze", year: 1992 },
+            { n: 6, title: "L’Aiguille creuse", artist: "Jacques Géron", year: 1994 }
         ];
 
         // --- ORNAMENTAL COMPONENTS ---
@@ -282,6 +321,9 @@
                 { name: "I Libri", id: "libri" },
                 { name: "Teatro", id: "teatro" },
                 { name: "Cinema & TV", id: "film-tv" },
+                { name: "Radio", id: "radio" },
+                { name: "Dischi", id: "discografia" },
+                { name: "Fumetti", id: "fumetti" },
             ];
 
             return (
@@ -819,6 +861,89 @@
                                         L'opera di Leblanc ha dato vita al capolavoro manga e anime <strong className="text-[#f4ecd8]">«Lupin III» (ルパン三世)</strong> creato nel 1967 dal maestro <strong>Monkey Punch</strong>, incentrato sul nipote del ladro gentiluomo e divenuto un colosso della cultura pop mondiale.
                                     </p>
                                 </div>
+                            </div>
+                        </section>
+
+                        {/* 6. SERIE RADIOFONICHE */}
+                        <section id="radio" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+                            <SectionHeading
+                                title="Serie Radiofoniche"
+                                subtitle="La voce di Lupin sulle onde francesi"
+                                ornament="📻"
+                            />
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {RADIO.map((r, idx) => (
+                                    <div key={idx} className="bg-[#1c1613] p-6 border border-[#c9a24b]/30 rounded-sm flex flex-col justify-between">
+                                        <div>
+                                            <div className="flex items-center justify-between mb-3 text-[#c9a24b]">
+                                                <Radio className="w-5 h-5 text-[#c9a24b]" />
+                                                <span className="font-cinzel text-sm font-bold tracking-wider">{r.years}</span>
+                                            </div>
+                                            <h4 className="font-playfair text-xl font-bold text-[#f4ecd8] mb-1">{r.title}</h4>
+                                            <p className="font-garamond italic text-base text-[#c9a24b] mb-4">{r.broadcaster}</p>
+                                        </div>
+                                        <ul className="font-garamond text-base text-[#d8ceb8] border-t border-[#c9a24b]/15 pt-3 space-y-1 leading-relaxed">
+                                            <li><span className="text-[#e5c378] font-semibold">Realizzazione:</span> {r.creator}</li>
+                                            <li><span className="text-[#e5c378] font-semibold">Adattamenti:</span> {r.adaptation}</li>
+                                            <li><span className="text-[#e5c378] font-semibold">Voce di Arsène Lupin:</span> {r.voice}</li>
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* 7. DISCOGRAFIA */}
+                        <section id="discografia" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-[#16120f]/60 border-y border-[#c9a24b]/20">
+                            <SectionHeading
+                                title="Discografia"
+                                subtitle="Gli audiolibri Livraphone"
+                                ornament="💿"
+                            />
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {DISCOGRAPHY.map((d, idx) => (
+                                    <div key={idx} className="bg-[#1c1613] p-6 border border-[#c9a24b]/30 rounded-sm flex flex-col justify-between">
+                                        <div>
+                                            <div className="flex items-center justify-between mb-3 text-[#c9a24b]">
+                                                <Disc3 className="w-5 h-5 text-[#c9a24b]" />
+                                                <span className="font-cinzel text-base font-bold tracking-wider">{d.year}</span>
+                                            </div>
+                                            <h4 className="font-playfair text-xl font-bold text-[#f4ecd8] mb-1">{d.title}</h4>
+                                            <p className="font-garamond italic text-base text-[#c9a24b] mb-4">{d.text} ({d.discs})</p>
+                                        </div>
+                                        <p className="font-garamond text-base text-[#d8ceb8] border-t border-[#c9a24b]/15 pt-3 leading-relaxed">
+                                            {d.label}{d.code ? ` ${d.code}` : ''}{d.ean ? <><br />EAN {d.ean}</> : null}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* 8. FUMETTI */}
+                        <section id="fumetti" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                            <SectionHeading
+                                title="Fumetti"
+                                subtitle={`Arsène Lupin adattato da ${COMICS_INFO.adapter} (${COMICS_INFO.publisher})`}
+                                ornament="🎨"
+                            />
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {COMICS.map((c) => (
+                                    <div key={c.n} className="bg-[#1c1613] p-6 border border-[#c9a24b]/30 rounded-sm flex flex-col justify-between">
+                                        <div>
+                                            <div className="flex items-center justify-between mb-3 text-[#c9a24b]">
+                                                <Palette className="w-5 h-5 text-[#c9a24b]" />
+                                                <span className="font-cinzel text-base font-bold tracking-wider">{c.year}</span>
+                                            </div>
+                                            <span className="font-cinzel text-[10px] uppercase tracking-widest px-2 py-0.5 bg-[#6b1f2a]/40 text-[#f4ecd8] border border-[#c9a24b]/30 rounded">Volume {c.n}</span>
+                                            <h4 className="font-playfair text-xl font-bold text-[#f4ecd8] mt-3 mb-4">{c.title}</h4>
+                                        </div>
+                                        <p className="font-garamond text-base text-[#d8ceb8] border-t border-[#c9a24b]/15 pt-3 leading-relaxed">
+                                            <span className="text-[#e5c378] font-semibold">Disegni di</span> {c.artist}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                         </section>
 
