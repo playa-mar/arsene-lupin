@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arsène Lupin — Il Ladro Gentiluomo | Édition Belle Époque</title>
     <!-- Favicon: cilindro e monocolo in oro su fondo bordeaux -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='13' fill='%236b1f2a' stroke='%23c9a24b' stroke-width='3'/%3E%3Cpath d='M21 38V15q0-3 3-3h16q3 0 3 3v23z' fill='%23c9a24b'/%3E%3Crect x='21' y='28' width='22' height='5' fill='%23120e0c'/%3E%3Crect x='11' y='37' width='42' height='6' rx='3' fill='%23e5c378'/%3E%3Ccircle cx='43' cy='50' r='5' fill='none' stroke='%23e5c378' stroke-width='2.2'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20x='2'%20y='2'%20width='60'%20height='60'%20rx='13'%20fill='%236b1f2a'%20stroke='%23c9a24b'%20stroke-width='3'/%3E%3Cpath%20d='M21%2038V15q0-3%203-3h16q3%200%203%203v23z'%20fill='%23c9a24b'/%3E%3Crect%20x='21'%20y='28'%20width='22'%20height='5'%20fill='%23120e0c'/%3E%3Crect%20x='11'%20y='37'%20width='42'%20height='6'%20rx='3'%20fill='%23e5c378'/%3E%3Ccircle%20cx='43'%20cy='50'%20r='5'%20fill='none'%20stroke='%23e5c378'%20stroke-width='2.2'/%3E%3C/svg%3E">
     <meta name="theme-color" content="#120e0c">
     <!-- Google Fonts: Playfair Display, Cormorant Garamond, Cinzel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -154,29 +154,20 @@
         ];
 
         const CINEMA = [
-            { year: 1919, original: "The Teeth of the Tiger", italian: "The Teeth of the Tiger", director: "Chester Withey", imdb: "https://www.imdb.com/title/tt0010761/", notes: "Pellicola muta statunitense tratta dall'omonimo romanzo." },
-            { year: 1932, original: "Arsène Lupin", italian: "Arsenio Lupin", director: "Jack Conway", imdb: "https://www.imdb.com/title/tt0022639/", notes: "Produzione MGM con John Barrymore e Lionel Barrymore." },
-            { year: 1957, original: "Les Aventures d'Arsène Lupin", italian: "Le avventure di Arsenio Lupin", director: "Jacques Becker", imdb: "https://www.imdb.com/title/tt0050152/", notes: "Con Robert Lamoureux nel ruolo di Lupin." },
-            { year: 1959, original: "Signé: Arsène Lupin", italian: "Il ritorno di Arsenio Lupin", director: "Yves Robert", imdb: "https://www.imdb.com/title/tt0052578/", notes: "Robert Lamoureux riprende il ruolo del celebre ladro." },
-            { year: 1962, original: "Arsène Lupin contre Arsène Lupin", italian: "Arsenio Lupin contro Arsenio Lupin", director: "Édouard Molinaro", imdb: "https://www.imdb.com/title/tt0055759/", notes: "Commedia con Jean-Claude Brialy e Jean-Pierre Cassel." },
-            { year: 2004, original: "Arsène Lupin", italian: "Arsenio Lupin", director: "Jean-Paul Salomé", imdb: "https://www.imdb.com/title/tt0373690/", notes: "Produzione franco-italo-spagnola con Romain Duris, Kristin Scott Thomas ed Eva Green." },
+            { year: 1919, img: "images/the_teeth_of_the_tiger_1919.jpg", original: "The Teeth of the Tiger", italian: "The Teeth of the Tiger", director: "Chester Withey", imdb: "https://www.imdb.com/title/tt0010761/", notes: "Pellicola muta statunitense tratta dall'omonimo romanzo." },
+            { year: 1932, img: "images/arsenio_lupin_1932.jpg", original: "Arsène Lupin", italian: "Arsenio Lupin", director: "Jack Conway", imdb: "https://www.imdb.com/title/tt0022639/", notes: "Produzione MGM con John Barrymore e Lionel Barrymore." },
+            { year: 1957, img: "images/le_avventure_arsenio_lupin_1957.jpg", original: "Les Aventures d'Arsène Lupin", italian: "Le avventure di Arsenio Lupin", director: "Jacques Becker", imdb: "https://www.imdb.com/title/tt0050152/", notes: "Con Robert Lamoureux nel ruolo di Lupin." },
+            { year: 1959, img: "images/il_ritorno_arsenio_lupin_1959.jpg", original: "Signé: Arsène Lupin", italian: "Il ritorno di Arsenio Lupin", director: "Yves Robert", imdb: "https://www.imdb.com/title/tt0052578/", notes: "Robert Lamoureux riprende il ruolo del celebre ladro." },
+            { year: 1962, img: "images/arsenio_lupin_contro_arsenio_lupin_1962.jpg", original: "Arsène Lupin contre Arsène Lupin", italian: "Arsenio Lupin contro Arsenio Lupin", director: "Édouard Molinaro", imdb: "https://www.imdb.com/title/tt0055759/", notes: "Commedia con Jean-Claude Brialy e Jean-Pierre Cassel." },
+            { year: 2004, img: "images/arsenio_lupin_2004.jpg", original: "Arsène Lupin", italian: "Arsenio Lupin", director: "Jean-Paul Salomé", imdb: "https://www.imdb.com/title/tt0373690/", notes: "Produzione franco-italo-spagnola con Romain Duris, Kristin Scott Thomas ed Eva Green." },
         ];
 
         const TELEVISION = [
-            { year: "1971–1974", original: "Arsène Lupin", italian: "Arsenio Lupin", imdb: "https://www.imdb.com/title/tt0136713/", notes: "Serie franco-europea con Georges Descrières nel ruolo di Lupin." },
-            { year: "1980", original: "Arsène Lupin joue et perd", italian: "Arsène Lupin joue et perd", imdb: "https://www.imdb.com/title/tt0198056/", notes: "Miniserie televisiva francese con Jean-Claude Brialy." },
-            { year: "1989–1996", original: "Le Retour d'Arsène Lupin", italian: "Il ritorno di Arsenio Lupin", imdb: "https://www.imdb.com/title/tt0096689/", notes: "Serie televisiva con François Dunoyer nel ruolo del protagonista." },
-            { year: "1996", original: "Les exploits d'Arsène Lupin", italian: "Les exploits d'Arsène Lupin", imdb: "https://www.imdb.com/it/title/tt0115293/", notes: "Serie animata franco-canadese prodotta da Cinar e France-Animation (26 episodi)." },
-            { year: "2021–oggi", original: "Lupin", italian: "Lupin", imdb: "https://www.imdb.com/it/title/tt2531336/", notes: "Serie Netflix con Omar Sy nel ruolo di Assane Diop." }
-        ];
-
-        const GALLERY_ITEMS = [
-            { image: "images/arresto_lupin.jpg", title: "L'arrestation d'Arsène Lupin", year: "Luglio 1905", tag: "Prima Apparizione", subtitle: "Je Sais Tout — N° 6", desc: "La primissima pubblicazione sulla rivista parigina fondata da Pierre Lafitte." },
-            { image: "images/Gentleman-Cambrioleur.jpg", title: "Gentleman-Cambrioleur", year: "Parigi, 1907", tag: "Volume I", subtitle: "Copertina originale", desc: "La copertina della prima raccolta, nello stile delle celebri illustrazioni di Léo Fontan." },
-            { image: "images/piece_teatrale.jpg", title: "La pièce teatrale", year: "Parigi, 1908", tag: "Théâtre de l'Athénée", subtitle: "Manifesto d'epoca", desc: "Locandina Belle Époque dello spettacolo di Maurice Leblanc e Francis de Croisset." },
-            { image: "images/aiguille_creuse.jpg", title: "L'Aiguille Creuse", year: "Éditions Lafitte, 1909", tag: "Romanzo Culto", subtitle: "La Guglia di Étretat", desc: "Il leggendario mistero ambientato tra le scogliere della Normandia." },
-            { image: "images/lupin_film_1932.jpg", title: "Locandina Cinema MGM", year: "Hollywood, 1932", tag: "Cinema Classico", subtitle: "Barrymore & Conway", desc: "Il manifesto del film MGM, dell'epoca d'oro del cinema americano." },
-            { image: "images/lupin_serie_1971.jpg", title: "Serie Televisiva RAI/ORTF", year: "1971 — 1974", tag: "Icona TV", subtitle: "Georges Descrières", desc: "L'eleganza con cilindro, monocolo e mantella che ha incantato generazioni." }
+            { year: "1971–1974", img: "images/arsenio_lupin_1971.jpg", original: "Arsène Lupin", italian: "Arsenio Lupin", imdb: "https://www.imdb.com/title/tt0136713/", notes: "Serie franco-europea con Georges Descrières nel ruolo di Lupin." },
+            { year: "1980", img: "images/arsene_lupin_joue_et_perd_1980.jpg", original: "Arsène Lupin joue et perd", italian: "Arsène Lupin joue et perd", imdb: "https://www.imdb.com/title/tt0198056/", notes: "Miniserie televisiva francese con Jean-Claude Brialy." },
+            { year: "1989–1996", img: "images/il_ritorno_arsenio_lupin_1989.jpg", original: "Le Retour d'Arsène Lupin", italian: "Il ritorno di Arsenio Lupin", imdb: "https://www.imdb.com/title/tt0096689/", notes: "Serie televisiva con François Dunoyer nel ruolo del protagonista." },
+            { year: "1996", img: "images/les_exploits_de_arsene_lupin_1996.jpg", original: "Les exploits d'Arsène Lupin", italian: "Les exploits d'Arsène Lupin", imdb: "https://www.imdb.com/it/title/tt0115293/", notes: "Serie animata franco-canadese prodotta da Cinar e France-Animation (26 episodi)." },
+            { year: "2021–oggi", img: "images/lupin_2021.jpg", original: "Lupin", italian: "Lupin", imdb: "https://www.imdb.com/it/title/tt2531336/", notes: "Serie Netflix con Omar Sy nel ruolo di Assane Diop." }
         ];
 
         // --- ORNAMENTAL COMPONENTS ---
@@ -291,7 +282,6 @@
                 { name: "I Libri", id: "libri" },
                 { name: "Teatro", id: "teatro" },
                 { name: "Cinema & TV", id: "film-tv" },
-                { name: "Galleria", id: "galleria" },
             ];
 
             return (
@@ -492,9 +482,9 @@
                                         <figure className="w-full max-w-[260px] mb-5">
                                             <div className="p-1.5 border border-[#c9a24b]/60 bg-[#120e0c] shadow-lg shadow-black/40">
                                                 <img
-                                                    src="images/standard_maurice-leblanc.jpg"
+                                                    src="images/maurice_leblanc.jpg"
                                                     alt="Ritratto di Maurice Leblanc, 1907"
-                                                    onClick={() => setZoomImg({ src: 'images/standard_maurice-leblanc.jpg', alt: 'Ritratto di Maurice Leblanc, 1907', caption: 'Maurice Leblanc, 1907 — Foto di Henri Manuel' })}
+                                                    onClick={() => setZoomImg({ src: 'images/maurice_leblanc.jpg', alt: 'Ritratto di Maurice Leblanc, 1907', caption: 'Maurice Leblanc, 1907 — Foto di Henri Manuel' })}
                                                     title="Clicca per ingrandire"
                                                     className="w-full aspect-[3/4] object-cover object-top block cursor-zoom-in"
                                                     style={{ filter: 'sepia(0.15)' }}
@@ -729,6 +719,16 @@
                                             className="bg-[#1c1613] p-5 border border-[#c9a24b]/30 rounded-sm flex flex-col justify-between"
                                         >
                                             <div>
+                                                {movie.img && (
+                                                    <img
+                                                        src={movie.img}
+                                                        alt={`Locandina: ${movie.italian} (${movie.year})`}
+                                                        loading="lazy"
+                                                        onClick={() => setZoomImg({ src: movie.img, alt: `Locandina: ${movie.italian} (${movie.year})`, caption: `${movie.italian} (${movie.year})` })}
+                                                        title="Clicca per ingrandire"
+                                                        className="w-full h-64 object-contain bg-[#120e0c] border border-[#c9a24b]/40 p-1 mb-4 cursor-zoom-in"
+                                                    />
+                                                )}
                                                 <div className="font-cinzel text-sm font-bold text-[#c9a24b] mb-1">
                                                     {movie.year}
                                                 </div>
@@ -769,7 +769,18 @@
                                             className="bg-[#1c1613] p-6 border border-[#c9a24b]/30 rounded-sm flex flex-col justify-between"
                                         >
                                             <div>
+                                                {show.img && (
+                                                    <img
+                                                        src={show.img}
+                                                        alt={`Immagine: ${show.italian} (${show.year})`}
+                                                        loading="lazy"
+                                                        onClick={() => setZoomImg({ src: show.img, alt: `Immagine: ${show.italian} (${show.year})`, caption: `${show.italian} (${show.year})` })}
+                                                        title="Clicca per ingrandire"
+                                                        className="w-full h-64 object-contain bg-[#120e0c] border border-[#c9a24b]/40 p-1 mb-4 cursor-zoom-in"
+                                                    />
+                                                )}
                                                 <div className="flex items-center justify-between mb-2">
+
                                                     <span className="font-cinzel text-base font-bold text-[#c9a24b]">
                                                         {show.year}
                                                     </span>
@@ -804,62 +815,6 @@
                                     </p>
                                 </div>
                             </div>
-                        </section>
-
-                        {/* 6. GALLERIA IMMAGINI VINTAGE */}
-                        <section id="galleria" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-                            <SectionHeading
-                                title="Iconografia & Manifesti"
-                                subtitle="Atmosfere visive, copertine storiche e locandine d'epoca"
-                                ornament="⚜"
-                            />
-
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {GALLERY_ITEMS.map((item, idx) => (
-                                    <div
-                                        key={idx}
-                                        className="relative overflow-hidden bg-gradient-to-b from-[#241c18] via-[#1a1411] to-[#120e0c] border border-[#c9a24b]/40 rounded-sm p-6 flex flex-col items-center justify-center text-center min-h-[260px] shadow-lg"
-                                    >
-                                        {/* Vintage frame accent lines */}
-                                        {!item.image && <div className="absolute inset-3 border border-[#c9a24b]/20 pointer-events-none"></div>}
-
-                                        {item.image && (
-                                            <div className="w-full mb-4 p-1.5 border border-[#c9a24b]/50 bg-[#120e0c] shadow-lg shadow-black/40">
-                                                <img
-                                                    src={item.image}
-                                                    alt={`${item.title} — ${item.subtitle}`}
-                                                    onClick={() => setZoomImg({ src: item.image, alt: `${item.title} — ${item.subtitle}`, caption: `${item.title} — ${item.subtitle} • ${item.year}` })}
-                                                    title="Clicca per ingrandire"
-                                                    className="w-full h-72 object-contain block cursor-zoom-in"
-                                                    style={{ filter: 'sepia(0.1)' }}
-                                                />
-                                            </div>
-                                        )}
-
-                                        <span className="font-cinzel text-[10px] uppercase tracking-[0.2em] text-[#c9a24b] mb-2 px-3 py-1 bg-[#6b1f2a]/40 border border-[#c9a24b]/30 rounded">
-                                            {item.tag}
-                                        </span>
-
-                                        <div className="my-2">
-                                            <h4 className="font-playfair text-xl font-bold text-[#f4ecd8]">
-                                                {item.title}
-                                            </h4>
-                                            <p className="font-garamond italic text-sm text-[#c9a24b]">
-                                                {item.subtitle} • {item.year}
-                                            </p>
-                                        </div>
-
-                                        <p className="font-garamond text-sm text-[#d8ceb8] max-w-xs mt-3 opacity-90 leading-normal">
-                                            {item.desc}
-                                        </p>
-
-                                        <div className="mt-4 text-[#c9a24b]/50 text-xs font-serif">
-                                            ❦ ❧ ❦
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
                         </section>
 
                     </main>
